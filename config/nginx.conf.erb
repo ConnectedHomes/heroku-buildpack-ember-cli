@@ -90,7 +90,7 @@ http {
         proxy_set_header NginX-Proxy true;
         proxy_ssl_session_reuse off;
         proxy_set_header Authorization <%= ENV["API_AUTH_BASIC"] %>;
-        proxy_redirect on;
+        proxy_redirect default;
         <% if ENV["NGINX_DEBUG"] %>add_header Ember-Cli-Proxy on;<% end %>
       }
     <% end %>
